@@ -12,9 +12,10 @@
     <ul>
         {% for product in products %}
         <li>
-            <h2>{{ product.title }} </h2>
-            <p> {{ product.description }} </p>
-            <hr>
+            <a href="{{product.get_absolute_url}}">
+                <h2>{{ product.title }} </h2>
+            </a>
+
         </li>
 
         {% endfor %}
