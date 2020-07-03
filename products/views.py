@@ -4,10 +4,7 @@ from .models import Product
 
 def products_list(request):
     products = Product.objects.all()
-    if list(products) == []:
-        return render(request, "products/no_products.html")
-    else:
-        return render(request, "products/products_list.html", {"products": products})
+    return render(request, "products/products_list.html", {"products": products})
 
 
 def product_details(request, pk):
