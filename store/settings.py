@@ -25,8 +25,7 @@ SECRET_KEY = '4@-u80^&oa1cxzz7%e6xwho73^yc%jm_05$l2*sw)&6(r!ej@-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['.herokuapp.com', "127.0.0.1"]
 
 # Application definition
 
@@ -54,7 +53,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ALLOWED_HOSTS = ['.herokuapp.com', ]
 
 ROOT_URLCONF = 'store.urls'
 

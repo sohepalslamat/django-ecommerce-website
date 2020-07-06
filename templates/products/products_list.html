@@ -15,7 +15,10 @@
             <a href="{{product.get_absolute_url}}">
                 <h2>{{ product.title }} </h2>
             </a>
+            <p>{{product.description}}</p>
+            <h5>price: {{product.price}} $</h5>
         </li>
+        <hr>
         {% empty %}
         <li>No Products</li>
 
