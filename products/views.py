@@ -19,7 +19,7 @@ def product_add(request):
 
         if form.is_valid():
             form.save()
-            return render(request, "products/product-add-successful.html", {'type': 'add'})
+            return render(request, "products/product-add-successful.html", {'type': 'added'})
     else:
         form = AddProductForm()
 
@@ -34,8 +34,15 @@ def product_edit(request, pk):
 
         if form.is_valid():
             form.save()
-            return render(request, "products/product-add-successful.html", {'type': 'edit'})
+            return render(request, "products/product-add-successful.html", {'type': 'edited'})
     else:
         form = AddProductForm(instance=product)
 
     return render(request, "products/product-add.html", {'form': form, 'type': 'Edit'})
+
+
+def product_delete(request, pk):
+    product = get_object_or_404(Product, id=pk)
+    product.delete()
+
+    return render(request, "products/product-add-successful.html", {'type': 'deleted'})
