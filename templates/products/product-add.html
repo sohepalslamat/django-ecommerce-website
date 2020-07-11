@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head_title %} {{type}} Product {% endblock head_title %}
+
+{% block content %}
+<section class="form-section">
+    <h2 class="section-headline">{{type}} Product</h2>
+    <div class="form">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>
+                <input type="submit" value="{{type}}">
+            </p>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -123,4 +123,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # heroku nostatic
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')  # heroku nostatic
+# add css file static
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+MEDIA_URL = '/media/'  # يعني رابط الوسائط على الموقع
+# يعني مسار مجلد الوسائط على السيرفر
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
