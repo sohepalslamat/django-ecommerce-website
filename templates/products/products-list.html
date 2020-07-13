@@ -21,9 +21,11 @@
                 <a class="product-name" href="{{product.get_absolute_url}}">{{ product.title | capfirst }}</a>
                 <div class="product-price">${{ product.price | floatformat:2 }}</div>
             </div>
+            {% if user and user.is_superuser %}
             <div>
                 <a href="{% url 'product_edit' pk=product.id %}">Edit</a> | <a href="{% url 'product_delete' pk=product.id %}">Delete</a>
             </div>
+            {% endif %}
 
         </div>
         {% empty %}
