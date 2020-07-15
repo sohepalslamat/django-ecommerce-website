@@ -137,3 +137,6 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'  # يعني رابط الوسائط على الموقع
 # يعني مسار مجلد الوسائط على السيرفر
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # console message email
