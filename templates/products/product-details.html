@@ -19,5 +19,8 @@
             <a href="{% url 'product_edit' pk=product.id %}">Edit</a> | <a href="{% url 'product_delete' pk=product.id %}">Delete</a>
         </div>
     {% endif %}
+    <div>
+        <a href="{% url 'add_to_cart' product_id=product.id %}">Add to cart</a>
+    </div>
 </section>
 {% endblock %}
