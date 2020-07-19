@@ -9,7 +9,8 @@ from products.models import Product
 def cart(request):
     user = request.user
     items = user.cart.items.all()
-    return render(request, 'carts/cart.html', {'items': items})
+    total_price = user.cart.total_price()
+    return render(request, 'carts/cart.html', {'items': items, 'total_price': total_price})
 
 
 @login_required
