@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'products.apps.ProductsConfig',
     'accounts.apps.AccountsConfig',
-    'carts.apps.CartsConfig'
+    'carts.apps.CartsConfig',
+    'orders.apps.OrdersConfig'
 ]
 
 # heroku nostatic
