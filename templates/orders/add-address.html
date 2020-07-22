@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head_title %} Add Address {% endblock head_title %}
+
+{% block content %}
+<section class="form-section">
+    <h2 class="section-headline">Add Address</h2>
+    <div class="form">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>
+                <input type="submit" value="send">
+            </p>
+        </form>
+    </div>
+</section>
+{% endblock %}
