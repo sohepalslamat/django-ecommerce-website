@@ -42,9 +42,6 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig'
 ]
 
-# heroku nostatic
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',  # heroku nostatic
