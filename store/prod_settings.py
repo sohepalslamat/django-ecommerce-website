@@ -21,7 +21,7 @@ DATABASES = {
 # email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL ')
+DEFAULT_FROM_EMAIL = getenv('DEFAULT_FROM_EMAIL ')
 
 SENDGRID_API_KEY = getenv('SENDGRID_API_KEY')
 
