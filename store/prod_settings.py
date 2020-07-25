@@ -4,7 +4,7 @@ from .settings import *
 
 SECRET_KEY = environ.get('SECRET_KEY')
 
-ALLOWED_HOSTS = ['store-buy.herokuapp.com']
+ALLOWED_HOSTS = ['store-buy.herokuapp.com', 'sohep.pythonanywhere.com']
 
 debug_status = environ.get('DEBUG').lower()
 if debug_status == 'true':
