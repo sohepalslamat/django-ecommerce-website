@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block head_title %} Order List {% endblock head_title %}
+
+{% block content %}
+<section>
+    <div>
+        <h1 class="section-headline">Order List</h1>
+        {% for order in orders %}
+            <ul>
+                <li>User: {{ order.user }}</li>
+                <li>order address: {{ order.address }}</li>
+                <li>order id: {{ order.id }}</li>
+                <li>order total: {{ order.total_price }}</li>
+            </ul>
+            {% empty %}
+                <li>No orders yet.</li>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -15,3 +15,9 @@ class Order(models.Model):
 
     def __str__(self):
         return str(self.created_at.date())
+
+    def total_price(self):
+        total = 0
+        for item in self.products.all():
+            total += item.price
+        return total

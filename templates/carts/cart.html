@@ -13,6 +13,6 @@
 <a href="{% url 'remove_all_from_cart' %}">remove all</a>
 
 <hr/>
-<p> total : {{total_price}}
+<p> total : {{total_price | floatformat}}
 <a href="{% url 'order' %}">checkout</a>
 {% endblock %}
