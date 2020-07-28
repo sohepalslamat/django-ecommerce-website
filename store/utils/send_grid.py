@@ -1,6 +1,11 @@
+from os import getenv
 import requests
 from store import prod_settings
 from django.core.mail.backends.base import BaseEmailBackend
+
+DEFAULT_FROM_EMAIL = getenv('DEFAULT_FROM_EMAIL')
+
+SENDGRID_API_KEY = getenv('SENDGRID_API_KEY')
 
 
 class SendGridEmailBackend(BaseEmailBackend):
@@ -32,11 +37,11 @@ class SendGridEmailBackend(BaseEmailBackend):
                       ]
                   }'''.replace('to_email', to_email)\
                       .replace('email_subject', email_subject)\
-                      .replace('from_email', prod_settings.DEFAULT_FROM_EMAIL)\
+                      .replace('from_email', DEFAULT_FROM_EMAIL)\
                       .replace('email_body', email_body)
 
         headers = {
-            'Authorization': f'Bearer {prod_settings.SENDGRID_API_KEY}',
+            'Authorization': f'Bearer {SENDGRID_API_KEY}',
             'Content-Type': 'application/json'
         }
 
