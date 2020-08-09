@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',  # scss
     'products.apps.ProductsConfig',
     'accounts.apps.AccountsConfig',
     'carts.apps.CartsConfig',
@@ -139,3 +140,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # console message email
+
+
+# Django Sass
+SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR, 'static')
+...

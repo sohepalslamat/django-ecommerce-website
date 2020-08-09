@@ -1,6 +1,5 @@
 from os import getenv
 import requests
-from store import prod_settings
 from django.core.mail.backends.base import BaseEmailBackend
 
 DEFAULT_FROM_EMAIL = getenv('DEFAULT_FROM_EMAIL')

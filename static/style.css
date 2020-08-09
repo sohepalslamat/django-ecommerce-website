@@ -168,11 +168,15 @@ main {
 .section-headline{
     font-size: 30px;
     font-weight: normal;
-    margin: 0;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+    
 }
 .section-description{
-    color: #999;
+    color: #e0e0e0;
     font-size: 18px;
+    margin: 10px;
+    margin-top: 20px ;
 }
 .products-wrapper{
     margin: 60px 0 60px 0;
@@ -296,109 +300,6 @@ span.helptext {
     text-decoration: none;
     color: #111;
     margin-left: 20px;
-}
-
-/*Product Rules*/
-.product{
-    width: 290px;
-    margin: 0 15px 60px;
-    float: left;
-    position: relative; /*2*/
-}
-
-.product-description{
-    text-align: left;
-}
-
-.product-brand{
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #787878;
-    text-transform: uppercase;
-    margin: 25px 0 5px;
-}
-
-.product-img{
-    position: relative;
-    overflow: hidden;
-    background: #efefef;
-    background-image: url("image-not-found.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 30%;
-    width: 290px;
-    height: 335px;
-}
-
-.product-img img{
-    width: 290px;
-    height: 335px;
-    box-sizing: border-box;
-    transition-duration: .4s;
-}
-
-.product-name{
-    font-size: 18px;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: capitalize;
-    color: #000;
-}
-
-.product-price{
-    margin-top: 15px;
-    font-weight: 700;
-}
-
-.product-price s{
-    margin-right: 10px;
-    color: rgb(236, 81, 81);
-}
-
-.product-label{ /*3*/
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-weight: 600;
-    color: #fff;
-    padding: 8px 10px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    z-index: 1;
-}
-.is-discount{ /*3*/
-    background-color: #0cbb88;
-}
-.is-new{ /*3*/
-    background-color: #000;
-}
-
-.details-btn{
-    position: absolute;
-    width: 92%;
-    padding: 15px;
-    box-sizing: border-box;
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    bottom: -50px;
-    left: 50%;
-    transform: translate(-50%,0);
-    opacity: 0;
-    transition-property: opacity, bottom;
-    transition-duration: .3s;
-}
-
-.product:hover .details-btn{
-    bottom: 15px;
-    opacity: 100;
-}
-
-.product:hover img{
-    transform: scale(0.9);
 }
 
 

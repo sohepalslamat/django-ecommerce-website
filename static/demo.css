@@ -1,0 +1,62 @@
+.button-log {
+  margin-left: 1.2em; }
+
+.wrapper {
+  background-color: black; }
+
+.cart1 {
+  position: relative; }
+  .cart1 span {
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    color: white;
+    background-color: red;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 0px 5px; }
+
+.carousel-item {
+  background-color: #5c5656c4; }
+  .carousel-item img {
+    opacity: 70%; }
+  .carousel-item div {
+    color: #ffffff; }
+
+.img-group {
+  position: relative; }
+  .img-group img {
+    box-sizing: border-box;
+    transition-duration: .4s;
+    cursor: pointer; }
+  .img-group .details-btn {
+    position: absolute;
+    width: 92%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition-property: opacity, bottom;
+    transition-duration: .3s; }
+
+.img-group:hover img {
+  opacity: 50%;
+  transform: scale(0.9); }
+
+.img-group:hover .details-btn {
+  bottom: 15px;
+  opacity: 100; }
+
+.card-body a {
+  text-decoration: none !important;
+  font-size: larger;
+  font-weight: 500; }
+
+/*# sourceMappingURL=demo.css.map */
