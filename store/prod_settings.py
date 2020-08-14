@@ -13,11 +13,14 @@ else:
     DEBUG = False
 
 
+'''
 DATABASES = {
     'default': dj_database_url.config(
         default=environ.get('DATABASE_URL')
     )
 }
+'''
+
 # email
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = 'store.utils.send_grid.SendGridEmailBackend'
