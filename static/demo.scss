@@ -1,3 +1,7 @@
+main{
+    font-family: -webkit-pictograph !important;
+}
+
 .button-log {
     margin-left: 1.2em; 
      
@@ -17,16 +21,26 @@
         font-size: 12px;
         border-radius: 50%;
         padding: 0px 5px;
-    }  
+}
 }
 .carousel-item{
     background-color: #5c5656c4;
     img{
         opacity: 70%;
     }
-    div{
-        color: #ffffff;
+    .product-title{
+        text-decoration: none;
+        font-size: 50px;
+        color:#fff;
+        @media screen and (max-width: 500px) {
+            font-size: 30px;
+                    
+        }
     }
+    
+}
+.admin{
+    text-align: center;
 }
 
 .img-group{
@@ -34,11 +48,11 @@
     img{
         box-sizing: border-box;
         transition-duration: .4s;
-        cursor: pointer;
     }
     .details-btn{
         position: absolute;
-        width: 92%;
+        width: 100%;
+        text-align: center;
         padding: 15px;
         box-sizing: border-box;
         text-decoration: none;
@@ -75,5 +89,67 @@
         font-weight: 500;
     }
 }
-   
+.featured-products{
+    position: relative;
+    height: 550px;
+    margin-bottom: 30px;
+    @media screen and (max-width: 900px) {
+        height: 320px;
+                
+    }
+    
+    svg{
+        @media screen and (max-width: 900px) {
+            height: 350px;
+                    
+        }
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        opacity: 100% ;
+        height: 700px;
+      
+                
+    }
+}
+.section-headline{
+    color: white;
+    margin-bottom: 30px;
+}
 
+
+.price{
+    background-color: crimson;
+    color: white;
+    display: inline;
+    padding: 4px;
+    border-radius: 3px;
+    
+}
+
+
+// footer
+footer{
+    background-color: #222;
+    height: 50px;
+    color: #999;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer p{
+    margin: 0;
+}
+
+
+#scroll-up{ /*2*/
+    width: 50px;
+    height: 50px;
+    background-color: #f2f2f2;
+    bottom: 60px;
+    right: 40px;
+    position: fixed;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #999;
+}

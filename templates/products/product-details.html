@@ -2,25 +2,34 @@
 {% block head_title %}{{product.title | capfirst }}{% endblock %}
 
 {% block content %}
-<section class="single-product-details clearfix">
-    <div class="product-details-img">
-        <img src="{{product.image.url}}" alt="" />
-    </div>
-    <div class="product-details-desc">
-        <div class="product-brand">{{product.brand | capfirst }}</div>
-        <h2 class="product-name">{{product.title | capfirst }}</h2>
-        <div class="product-price">$ {{product.price | floatformat:2 }}</div>
-        <p class="product-desc">
-            {{product.description}}
-        </p>
-    </div>
-    {% if user and user.is_superuser %}
-        <div>
-            <a href="{% url 'product_edit' pk=product.id %}">Edit</a> | <a href="{% url 'product_delete' pk=product.id %}">Delete</a>
+<section style="height:1000px;">
+    <div class="card mb-3 mt-5 product-detail" style="max-width: 100%;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="{{product.image.url}}" class="card-img" alt="" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="card-text text-muted">{{product.brand | capfirst }}</div>
+                    <h2 class="card-title">{{product.title | capfirst }}</h2>
+                    <div class="price card-text"> {{product.price | floatformat:2 }} $</div>
+                    <p class="card-body">
+                        {{product.description}}
+                    </p>
+                </div>
+            {% if user and user.is_superuser %}
+                <div>
+                    <a href="{% url 'product_edit' pk=product.id %}">Edit</a> | <a href="{% url 'product_delete' pk=product.id %}">Delete</a>
+                </div>
+            {% endif %}
+                <div class="my-2" style="text-align: center;">
+                    <a href="{% url 'add_to_cart' product_id=product.id %}">
+                        <i class="fas fa-cart-plus fa-5x" aria-hidden="true"></i>
+                    </a>
+                    
+                </div>
+            </div>
         </div>
-    {% endif %}
-    <div>
-        <a href="{% url 'add_to_cart' product_id=product.id %}">Add to cart</a>
     </div>
 </section>
 {% endblock %}
