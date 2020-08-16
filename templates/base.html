@@ -29,7 +29,7 @@
                 </a>
 
                 <div class="navbar">
-                    <div class="cart1">
+                    <div class="cart-icon">
                         <a href="{% url 'cart' %}" style="color:whitesmoke;"><i class="fas fa-shopping-cart"></i></a>
 
                         {% if request.user.cart.items.all|length > 0 %}

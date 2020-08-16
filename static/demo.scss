@@ -1,3 +1,5 @@
+// base
+
 main{
     font-family: -webkit-pictograph !important;
 }
@@ -10,7 +12,7 @@ main{
     background-color: black ;
 }
 
-.cart1 {
+.cart-icon {
     position: relative;
     span{
         position: absolute;
@@ -21,8 +23,36 @@ main{
         font-size: 12px;
         border-radius: 50%;
         padding: 0px 5px;
+    }
 }
+
+// footer
+footer{
+    background-color: #222;
+    height: 50px;
+    color: #999;
+    text-align: center;
+    line-height: 50px;
 }
+
+footer p{
+    margin: 0;
+}
+
+
+#scroll-up{ /*2*/
+    width: 50px;
+    height: 50px;
+    background-color: #f2f2f2;
+    bottom: 60px;
+    right: 40px;
+    position: fixed;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #999;
+}
+
+// product-list
 .carousel-item{
     background-color: #5c5656c4;
     img{
@@ -127,29 +157,65 @@ main{
     
 }
 
-
-// footer
-footer{
-    background-color: #222;
-    height: 50px;
-    color: #999;
-    text-align: center;
-    line-height: 50px;
-}
-
-footer p{
-    margin: 0;
-}
-
-
-#scroll-up{ /*2*/
-    width: 50px;
-    height: 50px;
-    background-color: #f2f2f2;
-    bottom: 60px;
-    right: 40px;
-    position: fixed;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #999;
+// cart
+.cart{
+    padding: 10px;
+    height: fit-content;
+    ul{
+        background-color: rgba(240, 183, 109, 0.39);
+        width: 60%;
+        border-radius: 20px 0px;
+        padding: 5px;
+        margin: 2px auto;
+        list-style: none;
+        @media screen and (max-width: 900px) {
+            width: 100%;
+                    
+        }
+        li:nth-child(2n-1){
+            background-color: rgba(199, 189, 189, 0.493);
+            
+        }
+        li:nth-child(2n){
+            background-color: rgba(128, 119, 119, 0.534);
+        }
+        li{
+            padding: 8px;
+            margin: 5px auto;
+            width: 80%;
+            
+            p{
+                font-size: x-large;
+                text-align: left;
+                display: inline;
+            }
+            a{  
+                font-size: large;
+                float: right;
+                margin: 0px 5px ;
+                padding: 2px;
+                color: black;
+                width: 20px;
+                height: 20x;
+                text-align: center;
+                text-decoration: none;
+            }
+            a:hover{
+                transform: scale(1.2);
+                color: white;
+            }  
+        }
+        .total{
+            font-weight: 800;
+            font-size: x-large;
+            width: fit-content;
+            color: rgb(82, 72, 72);
+            margin: 15px auto;
+            span{
+                color: rgb(82, 72, 72);
+            }
+        }
+          
+    }
+    
 }

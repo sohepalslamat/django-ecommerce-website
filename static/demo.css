@@ -7,9 +7,9 @@ main {
 .wrapper {
   background-color: black; }
 
-.cart1 {
+.cart-icon {
   position: relative; }
-  .cart1 span {
+  .cart-icon span {
     position: absolute;
     top: -5px;
     right: -7px;
@@ -18,6 +18,28 @@ main {
     font-size: 12px;
     border-radius: 50%;
     padding: 0px 5px; }
+
+footer {
+  background-color: #222;
+  height: 50px;
+  color: #999;
+  text-align: center;
+  line-height: 50px; }
+
+footer p {
+  margin: 0; }
+
+#scroll-up {
+  /*2*/
+  width: 50px;
+  height: 50px;
+  background-color: #f2f2f2;
+  bottom: 60px;
+  right: 40px;
+  position: fixed;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #999; }
 
 .carousel-item {
   background-color: #5c5656c4; }
@@ -96,26 +118,51 @@ main {
   padding: 4px;
   border-radius: 3px; }
 
-footer {
-  background-color: #222;
-  height: 50px;
-  color: #999;
-  text-align: center;
-  line-height: 50px; }
-
-footer p {
-  margin: 0; }
-
-#scroll-up {
-  /*2*/
-  width: 50px;
-  height: 50px;
-  background-color: #f2f2f2;
-  bottom: 60px;
-  right: 40px;
-  position: fixed;
-  border-radius: 4px;
-  cursor: pointer;
-  color: #999; }
+.cart {
+  padding: 10px;
+  height: fit-content; }
+  .cart ul {
+    background-color: rgba(240, 183, 109, 0.39);
+    width: 60%;
+    border-radius: 20px 0px;
+    padding: 5px;
+    margin: 2px auto;
+    list-style: none; }
+    @media screen and (max-width: 900px) {
+      .cart ul {
+        width: 100%; } }
+    .cart ul li:nth-child(2n-1) {
+      background-color: rgba(199, 189, 189, 0.493); }
+    .cart ul li:nth-child(2n) {
+      background-color: rgba(128, 119, 119, 0.534); }
+    .cart ul li {
+      padding: 8px;
+      margin: 5px auto;
+      width: 80%; }
+      .cart ul li p {
+        font-size: x-large;
+        text-align: left;
+        display: inline; }
+      .cart ul li a {
+        font-size: large;
+        float: right;
+        margin: 0px 5px;
+        padding: 2px;
+        color: black;
+        width: 20px;
+        height: 20x;
+        text-align: center;
+        text-decoration: none; }
+      .cart ul li a:hover {
+        transform: scale(1.2);
+        color: white; }
+    .cart ul .total {
+      font-weight: 800;
+      font-size: x-large;
+      width: fit-content;
+      color: #524848;
+      margin: 15px auto; }
+      .cart ul .total span {
+        color: #524848; }
 
 /*# sourceMappingURL=demo.css.map */
