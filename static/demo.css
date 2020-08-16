@@ -167,6 +167,30 @@ footer p {
       .cart ul .total span {
         color: #524848; }
 
+.login {
+  width: 70%;
+  margin: 1px auto;
+  height: 500px;
+  position: relative; }
+  @media screen and (max-width: 900px) {
+    .login {
+      width: 100%; } }
+  .login #Layer_1 {
+    position: absolute;
+    width: 75%;
+    right: -12%;
+    top: 0px;
+    z-index: 40; }
+    @media screen and (max-width: 900px) {
+      .login #Layer_1 {
+        width: 75%;
+        height: 250px;
+        right: -2%; } }
+  .login #Layer_2 {
+    position: absolute;
+    top: 30px;
+    z-index: 50; }
+
 .form-group label {
   display: block; }
 
