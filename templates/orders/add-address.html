@@ -2,15 +2,16 @@
 {% block head_title %} Add Address {% endblock head_title %}
 
 {% block content %}
-<section class="form-section">
-    <h2 class="section-headline">Add Address</h2>
-    <div class="form">
+<section style="height:1000px;">
+    <div class="card mb-3 mt-5">
+        <h2 class="card-title text-center">Add Address</h2>
         <form action="" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <p>
-                <input type="submit" value="send">
-            </p>
+            <div class="form-group text-center">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Submit</button>
+                
+            </div>
         </form>
     </div>
 </section>
