@@ -2,6 +2,9 @@
 
 main{
     font-family: -webkit-pictograph !important;
+    a{
+        text-decoration: none !important;
+    }
 }
 
 .button-log {
@@ -218,4 +221,14 @@ footer p{
           
     }
     
+}
+// signup + rest password
+
+.form-group{
+    label{
+        display: block;
+    }
+    ul{
+        display: none;
+    }
 }

@@ -2,12 +2,20 @@
 {% block head_title %} Login {% endblock head_title %}
 
 {% block content %}
-
-<h1>login</h1>
-
-<form method="POST">
-    {% csrf_token %} {{ form.as_p }}
-    <input type="submit" value="Login">
-</form>
+<section style="height:1000px;">
+    <div class="card mt-5 py-3">
+        <h2 class="card-title text-center">Login</h2>
+        <form method="POST">
+            <div class="form-group text-center">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="card-link text-center my-2">
+                    <a class="text-dark mx-2" href="{% url 'signup' %}">Don't have an account?</a>
+                    <a class="text-dark mx-2" href="{% url 'password_reset' %}">Reset password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary my-2">Login</button>
+            </div>
+        </form>
+    </div>
 
 {% endblock %}
