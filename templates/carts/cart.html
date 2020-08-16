@@ -11,6 +11,8 @@
                 <p>{{item.title | capfirst}}</p>
                 <a href="{% url 'remove_from_cart' product_id=item.id %}"><i class="fa fa-trash-alt" aria-hidden="true"></i></a>
             </li>
+            {% empty %}
+            <p class="text-center">No products.</p>
             {% endfor %}
             <p class="total"> Total : <span>{{total_price | floatformat}} $</span></p>
             <a class="card-link float-right mx-4" href="{% url 'remove_all_from_cart' %}">Remove All</a>

@@ -2,19 +2,23 @@
 {% block head_title %} Order List {% endblock head_title %}
 
 {% block content %}
-<section>
-    <div>
-        <h1 class="section-headline">Order List</h1>
+<section style="max-height:fit-content; height:1500px;">
+    <div class="cart card mt-5">
+        <h2 class="card-title text-center my-2">Order List</h1>
         {% for order in orders %}
-            <ul>
-                <li>User: {{ order.user }}</li>
-                <li>order address: {{ order.address }}</li>
-                <li>order id: {{ order.id }}</li>
-                <li>order total: {{ order.total_price }}</li>
+            
+            <ul class="my-3">
+                <p class="card-text text-muted">Order Date:{{order.created_at}}</p>
+                <li>User: <span class="text-white">{{ order.user }}</span></li>
+                <li>Order Address: <span class="text-secondary">{{ order.address }}</span></li>
+                <li>Order Total: <span class="text-white">{{ order.total_price }}</span></li>
             </ul>
             {% empty %}
                 <li>No orders yet.</li>
         {% endfor %}
+        <div class="card-link text-right">
+            <a href="{% url 'home' %}">Back To HomePage</a>
+        </div>
     </div>
 </section>
 {% endblock %}
