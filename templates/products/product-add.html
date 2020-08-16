@@ -2,15 +2,16 @@
 {% block head_title %} {{type}} Product {% endblock head_title %}
 
 {% block content %}
-<section class="form-section">
-    <h2 class="section-headline">{{type}} Product</h2>
+<section style="height:1000px;">
+    <div class="cart card mb-3 mt-5">
+    <h2 class="card-title text-center">{{type}} Product</h2>
     <div class="form">
         <form action="" method="post" enctype="multipart/form-data">
+        <div class="form-group text-center">
             {% csrf_token %}
             {{ form.as_p }}
-            <p>
-                <input type="submit" value="{{type}}">
-            </p>
+            <button type="submit" class="btn btn-primary">{{type}}</button>
+        </div>
         </form>
     </div>
 </section>
