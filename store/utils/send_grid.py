@@ -41,10 +41,11 @@ class SendGridEmailBackend(BaseEmailBackend):
 
         headers = {
             'Authorization': f'Bearer {SENDGRID_API_KEY}',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json; charset=utf-8;'
         }
 
-        response = requests.request('POST', url, headers=headers, data=payload)
+        response = requests.request(
+            'POST', url, headers=headers, data=payload.encode('utf-8'))
         if response.status_code != 202:
             raise Exception(
                 f'{payload}\n{response.status_code}\n{response.content}')
