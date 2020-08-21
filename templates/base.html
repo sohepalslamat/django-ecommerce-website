@@ -21,10 +21,9 @@
     <div class="wrapper">
         <!--HEADER-->
         <header class=''>
-            <nav class="navbar navbar-dark bg-dark">
+            <nav class="navbar navbar-dark ">
                 <a class=" navbar-brand" href="{% url 'home' %}">
-                    <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30"
-                        class="d-inline-block align-top" alt="" loading="lazy">
+                    
                     STORE
                 </a>
 
@@ -40,10 +39,10 @@
                     </div>
                     {% if user.is_authenticated %}
                     <h6 class="text-white" style="font-weight: 200; margin-left: 1.1em;">Hi, {{ user.username }}</h6>
-                    <input type="button" class="button-log btn btn-outline-secondary"
+                    <input type="button" class="button-log btn btn-outline-dark"
                         onclick="location.href='{% url 'logout' %}'" value="Log out" />
                     {% else  %}
-                    <input type="button" class="button-log btn btn-outline-primary"
+                    <input type="button" class="button-log btn btn-outline-light"
                         onclick="location.href='{% url 'login' %}'" value="Log in" />
                     {% endif %}
                 </div>

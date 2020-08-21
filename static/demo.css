@@ -1,13 +1,26 @@
+.backgr {
+  background-color: #81D7D3 !important; }
+  .backgr h2 {
+    color: white; }
+
 main {
   font-family: -webkit-pictograph !important; }
   main a {
     text-decoration: none !important; }
 
+nav {
+  background-color: #49919b; }
+
+footer {
+  background-color: #49919b !important; }
+  footer p {
+    color: #f2f2f2; }
+
 .button-log {
   margin-left: 1.2em; }
 
 .wrapper {
-  background-color: black; }
+  background-color: #0ABBB5; }
 
 .cart-icon {
   position: relative; }
@@ -44,9 +57,8 @@ footer p {
   color: #999; }
 
 .carousel-item {
-  background-color: #5c5656c4; }
-  .carousel-item img {
-    opacity: 70%; }
+  background-color: #00ABC0;
+  opacity: 80%; }
   .carousel-item .product-title {
     text-decoration: none;
     font-size: 50px;
@@ -57,12 +69,16 @@ footer p {
 .admin {
   text-align: center; }
 
-.img-group {
+.product .card {
+  opacity: 90%;
+  border-radius: 10px; }
+
+.product .img-group {
   position: relative; }
-  .img-group img {
+  .product .img-group img {
     box-sizing: border-box;
     transition-duration: .4s; }
-  .img-group .details-btn {
+  .product .img-group .details-btn {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -80,11 +96,11 @@ footer p {
     transition-property: opacity, bottom;
     transition-duration: .3s; }
 
-.img-group:hover img {
+.product .img-group:hover img {
   opacity: 50%;
   transform: scale(0.9); }
 
-.img-group:hover .details-btn {
+.product .img-group:hover .details-btn {
   bottom: 15px;
   opacity: 100; }
 
@@ -124,7 +140,7 @@ footer p {
   padding: 10px;
   height: fit-content; }
   .cart ul {
-    background-color: rgba(240, 183, 109, 0.39);
+    background-color: #D1EFED;
     width: 60%;
     border-radius: 20px 0px;
     padding: 5px;
@@ -171,14 +187,15 @@ footer p {
   width: 70%;
   margin: 1px auto;
   height: 500px;
-  position: relative; }
+  position: relative;
+  padding: 10px; }
   @media screen and (max-width: 900px) {
     .login {
       width: 100%; } }
   .login #Layer_1 {
     position: absolute;
     width: 75%;
-    right: -12%;
+    right: -13%;
     top: 0px;
     z-index: 40; }
     @media screen and (max-width: 900px) {
@@ -194,7 +211,16 @@ footer p {
 .form-group label {
   display: block; }
 
-.form-group ul {
-  display: none; }
+.form-group .helptext {
+  display: block; }
+
+.signup {
+  margin: 10px auto;
+  color: #000;
+  width: 60%;
+  padding: 10px; }
+  @media screen and (max-width: 900px) {
+    .signup {
+      width: 90%; } }
 
 /*# sourceMappingURL=demo.css.map */

@@ -1,9 +1,25 @@
 // base
+$bg-2:#81D7D3;
+.backgr {
+    background-color: $bg-2 !important;
+    h2{
+        color: white;
+    }
+}
 
 main{
     font-family: -webkit-pictograph !important;
     a{
         text-decoration: none !important;
+    }
+}
+nav{
+    background-color: #49919b ;
+}
+footer{
+    background-color: #49919b !important ;
+    p{
+        color: #f2f2f2;
     }
 }
 
@@ -12,7 +28,7 @@ main{
      
 }
 .wrapper{
-    background-color: black ;
+    background-color: #0ABBB5 ;
 }
 
 .cart-icon {
@@ -57,10 +73,8 @@ footer p{
 
 // product-list
 .carousel-item{
-    background-color: #5c5656c4;
-    img{
-        opacity: 70%;
-    }
+    background-color: #00ABC0;
+    opacity: 80%;
     .product-title{
         text-decoration: none;
         font-size: 50px;
@@ -75,44 +89,50 @@ footer p{
 .admin{
     text-align: center;
 }
-
-.img-group{
-    position: relative;
-    img{
-        box-sizing: border-box;
-        transition-duration: .4s;
-    }
-    .details-btn{
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-        box-sizing: border-box;
-        text-decoration: none;
-        background-color: #000;
-        color: #fff;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        bottom: -10px;
-        left: 50%;
-        transform: translate(-50%,0);
-        opacity: 0;
-        transition-property: opacity, bottom;
-        transition-duration: .3s;
+.product{
+    .card{
+        opacity: 90%;
+        border-radius: 10px;
     }
 
-}
-.img-group:hover{
-    img{
-        opacity: 50%;            
-        transform: scale(0.9);
-    }
-    .details-btn{
-        bottom: 15px;
-        opacity: 100;
-        
-    }
+    .img-group{
+        position: relative;
+        img{
+            box-sizing: border-box;
+            transition-duration: .4s;
+        }
+        .details-btn{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            box-sizing: border-box;
+            text-decoration: none;
+            background-color: #000;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%,0);
+            opacity: 0;
+            transition-property: opacity, bottom;
+            transition-duration: .3s;
+        }
 
+    }
+    .img-group:hover{
+        img{
+            opacity: 50%;            
+            transform: scale(0.9);
+        }
+        .details-btn{
+            bottom: 15px;
+            opacity: 100;
+            
+        }
+
+    }
 }
 
 .card-body{
@@ -165,7 +185,7 @@ footer p{
     padding: 10px;
     height: fit-content;
     ul{
-        background-color: rgba(240, 183, 109, 0.39);
+        background-color: #D1EFED;
         width: 60%;
         border-radius: 20px 0px;
         padding: 5px;
@@ -230,6 +250,7 @@ footer p{
     margin: 1px auto;
     height: 500px;
     position: relative;
+    padding: 10px;
     @media screen and (max-width: 900px) {
         width: 100%;
                      
@@ -237,7 +258,7 @@ footer p{
     #Layer_1{
         position: absolute;
         width: 75%;
-        right:-12%;
+        right:-13%;
         top:0px;
         z-index: 40;
         @media screen and (max-width: 900px) {
@@ -256,7 +277,17 @@ footer p{
     label{
         display: block;
     }
-    ul{
-        display: none;
+    .helptext{
+            display: block;
     }
+}
+.signup{
+    margin: 10px auto;
+    color: #000;
+    @media screen and (max-width: 900px) {
+        width: 90%;
+    }
+    width: 60%;
+    padding: 10px;
+    
 }

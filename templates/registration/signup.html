@@ -2,11 +2,15 @@
 {% block head_title %} Signup {% endblock head_title %}
 
 {% block content %}
-
-<h1>Signup</h1>
-
-<form method="POST">
-    {% csrf_token %} {{ form.as_p }}
-    <input type="submit" value="Signup">
-</form>
+<section style="height:1000px;">
+    <div class="signup backgr card shadow-lg rounded mt-5 pb-3">
+        <h2 class="card-title py-5 text-center">SignUp</h2>
+        <form method="POST">
+            <div class="form-group text-center">
+                {% csrf_token %} {{ form.as_p }}
+                <button type="submit" class="btn shadow-lg rounded btn-secondary my-2">Signup</button>
+            </div>
+        </form>
+    </div>
+</section>
 {% endblock %}
