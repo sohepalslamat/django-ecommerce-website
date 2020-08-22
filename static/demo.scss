@@ -15,16 +15,21 @@ main{
 }
 nav{
     background-color: #49919b ;
+    font-family: cursive;
+
 }
 footer{
-    background-color: #49919b !important ;
-    p{
-        color: #f2f2f2;
+    font-family: cursive;
+    height: 100px !important;
+    background-color: #d6e5e7 !important ;
     }
-}
 
 .button-log {
-    margin-left: 1.2em; 
+    margin-left: 1.2em;
+    @media screen and (max-width: 500px) {
+        margin-left: 5em;       
+                
+    }
      
 }
 .wrapper{

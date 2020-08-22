@@ -9,16 +9,19 @@ main {
     text-decoration: none !important; }
 
 nav {
-  background-color: #49919b; }
+  background-color: #49919b;
+  font-family: cursive; }
 
 footer {
-  background-color: #49919b !important; }
-  footer p {
-    color: #f2f2f2; }
+  font-family: cursive;
+  height: 100px !important;
+  background-color: #d6e5e7 !important; }
 
 .button-log {
   margin-left: 1.2em; }
-
+  @media screen and (max-width: 500px) {
+    .button-log {
+      margin-left: 5em; } }
 .wrapper {
   background-color: #0ABBB5; }
 

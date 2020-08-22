@@ -22,9 +22,8 @@
         <!--HEADER-->
         <header class=''>
             <nav class="navbar navbar-dark ">
-                <a class=" navbar-brand" href="{% url 'home' %}">
-                    
-                    STORE
+                <a class="navbar-brand" href="{% url 'home' %}">
+                   <strong style="color:#E0E0E0">Mobile</strong><strong style="color:#455A64">Me</strong>
                 </a>
 
                 <div class="navbar">
@@ -39,7 +38,7 @@
                     </div>
                     {% if user.is_authenticated %}
                     <h6 class="text-white" style="font-weight: 200; margin-left: 1.1em;">Hi, {{ user.username }}</h6>
-                    <input type="button" class="button-log btn btn-outline-dark"
+                    <input type="button" class="button-log btn btn-outline-light"
                         onclick="location.href='{% url 'logout' %}'" value="Log out" />
                     {% else  %}
                     <input type="button" class="button-log btn btn-outline-light"
@@ -65,7 +64,8 @@
             <i class="fas fa-chevron-up"></i>
         </a>
         <!--2-->
-        <p>&copy; 2020 STORE All Rights Reserved.</p>
+        <strong>&copy; 2020 — MobileMe</strong>
+        <strong class="d-block">Made with 💜 by <a href="https://coretabs.net/user/sohep/projects" target="_blank">Sohep Alslamat</a></strong>
         <!--2-->
     </footer>
 
